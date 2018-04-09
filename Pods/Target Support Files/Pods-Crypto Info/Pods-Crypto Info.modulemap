@@ -1,0 +1,6 @@
+framework module Pods_Crypto_Info {
+  umbrella header "Pods-Crypto Info-umbrella.h"
+
+  export *
+  module * { export * }
+}
