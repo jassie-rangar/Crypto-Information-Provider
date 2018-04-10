@@ -41,7 +41,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIb-Aa-Yj0" customClass="GradientView" customModule="Crypto_Info" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="375" height="379"/>
+                                <rect key="frame" x="16" y="88" width="343" height="379"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
@@ -134,7 +134,7 @@
                             <constraint firstItem="bGY-At-YyE" firstAttribute="leading" secondItem="rnr-lB-G7T" secondAttribute="leadingMargin" id="GsC-73-yme"/>
                             <constraint firstItem="bGY-At-YyE" firstAttribute="top" secondItem="fIb-Aa-Yj0" secondAttribute="bottom" constant="8" symbolic="YES" id="HZU-Nx-g7g"/>
                             <constraint firstItem="tR1-nr-oKQ" firstAttribute="top" secondItem="iT9-Ma-io1" secondAttribute="bottom" constant="8" symbolic="YES" id="Lp6-AO-IDi"/>
-                            <constraint firstAttribute="trailing" secondItem="fIb-Aa-Yj0" secondAttribute="trailing" id="Pxv-YN-aOo"/>
+                            <constraint firstAttribute="trailing" secondItem="fIb-Aa-Yj0" secondAttribute="trailing" constant="16" id="Pxv-YN-aOo"/>
                             <constraint firstItem="iT9-Ma-io1" firstAttribute="leading" secondItem="6IW-s3-v0p" secondAttribute="trailing" constant="8" symbolic="YES" id="TQX-bI-AST"/>
                             <constraint firstItem="TXU-Il-7zg" firstAttribute="trailing" secondItem="iT9-Ma-io1" secondAttribute="trailing" id="Ukz-w5-HmE"/>
                             <constraint firstItem="3eN-gt-4dg" firstAttribute="leading" secondItem="6IW-s3-v0p" secondAttribute="leading" id="WwL-ng-Yqf"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="tR1-nr-oKQ" firstAttribute="leading" secondItem="5ke-1d-m9Z" secondAttribute="leading" id="mgd-gP-7v5"/>
                             <constraint firstItem="6IW-s3-v0p" firstAttribute="top" secondItem="3eN-gt-4dg" secondAttribute="bottom" constant="8" symbolic="YES" id="nJG-g4-0hS"/>
                             <constraint firstItem="6IW-s3-v0p" firstAttribute="trailing" secondItem="ZEJ-Pq-U3o" secondAttribute="trailing" id="ned-u6-ZIE"/>
-                            <constraint firstItem="fIb-Aa-Yj0" firstAttribute="leading" secondItem="rnr-lB-G7T" secondAttribute="leading" id="p5Z-lr-XFJ"/>
+                            <constraint firstItem="fIb-Aa-Yj0" firstAttribute="leading" secondItem="rnr-lB-G7T" secondAttribute="leading" constant="16" id="p5Z-lr-XFJ"/>
                             <constraint firstItem="bGY-At-YyE" firstAttribute="leading" secondItem="3eN-gt-4dg" secondAttribute="leading" id="rLs-9W-zrq"/>
                             <constraint firstItem="6IW-s3-v0p" firstAttribute="leading" secondItem="tR1-nr-oKQ" secondAttribute="leading" id="tdT-Ed-Eil"/>
                             <constraint firstItem="wSv-0M-Frf" firstAttribute="trailing" secondItem="rnr-lB-G7T" secondAttribute="trailingMargin" id="tx1-dD-lFD"/>
@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEW-dh-WOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="47"/>
+            <point key="canvasLocation" x="981.60000000000002" y="46.551724137931039"/>
         </scene>
         <!--Currency Name View Controller-->
         <scene sceneID="F1Q-r8-ehN">

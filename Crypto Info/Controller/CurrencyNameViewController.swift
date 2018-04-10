@@ -34,8 +34,7 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
     var rank: [String] = []
     
     
-    var userArray:[Cell] = []
-    
+    var userArray: [Cell] = []
     var time = Timer()
     
     override func viewDidLoad()
@@ -49,6 +48,22 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
         tableView.isHidden = true
         self.fetchData() 
         self.indicator.isHidden = true
+        
+        if ConnectionCheck.isConnectedToNetwork() == true
+        {
+            print("Internet connection OK")
+        }
+        else
+        {
+            print("Internet connection FAILED")
+            let alert = UIAlertController(title: "Alert", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action:UIAlertAction!) in
+                print("you have pressed the Cancel button")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     func networking()
@@ -56,7 +71,7 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
         DispatchQueue.main.async
         {
             self.getData()
-            {(success, fail, names, price, symb, change24h, ranking, change1h,change7d) in
+            { (success, fail, names, price, symb, change24h, ranking, change1h,change7d) in
                 if success == false
                 {
                     return
@@ -106,9 +121,6 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
         self.count += 1
     }
     
-    
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1
@@ -116,11 +128,14 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if count == 0 {
+        if count == 0
+        {
             return userArray.count
         }
-        else {
-            return currencyName.count}
+        else
+        {
+            return currencyName.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -184,8 +199,6 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
                 {
                     completion(false,error,nil,nil,nil,nil,nil,nil,nil)
                 }
-                
-                
             }
             else
             {
@@ -214,51 +227,56 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
 extension CurrencyNameViewController
 {
     
-    func savetocore(_ name:String,_ symb:String){
+    func savetocore(_ name: String, _ symb: String)
+    {
         let newSong = NSEntityDescription.insertNewObject(forEntityName: "Cell", into: self.context)
         newSong.setValue(name, forKey: "currencyName")
         newSong.setValue(symb, forKey: "symbol")
     
-    do{
+        do
+        {
             try self.context.save()
         }
-        catch{
+        catch
+        {
             self.alert(message: "Problem saving it to app!!")
         }
     }
     
-    func fetchData(){
+    func fetchData()
+    {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        do{
+        do
+        {
             userArray = try context.fetch(Cell.fetchRequest())
         }
-        catch{
+        catch
+        {
             alert(message: "Error loading Data")
         }
     }
     
     func alert(message:String )
     {
-        DispatchQueue.main.async {
-            
-            if message == "The Internet connection appears to be offline." {
+        DispatchQueue.main.async
+        {
+            if message == "The Internet connection appears to be offline."
+            {
                 let editor = self.storyboard!.instantiateViewController(withIdentifier: "internet")
                 self.present(editor, animated: true, completion: nil)
-              //  self.UISetup(enable: true)
             }
                 
-            else{
+            else
+            {
                 
                 let alertview = UIAlertController(title: "", message: message, preferredStyle: .alert)
                 alertview.addAction(UIAlertAction(title: "Try Again!", style: .default, handler: {
                     action in
-                    DispatchQueue.main.async {
-                        
-                       // self.UISetup(enable: true)
+                    DispatchQueue.main.async
+                    {
                         self.dismiss(animated: true, completion: nil)
-                        
                     }
                 }))
                 self.present(alertview, animated: true, completion: nil)
