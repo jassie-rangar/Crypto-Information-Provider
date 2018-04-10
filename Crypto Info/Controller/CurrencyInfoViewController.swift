@@ -31,8 +31,6 @@ class CurrencyInfoViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        
-        
         if ConnectionCheck.isConnectedToNetwork() == true
         {
             print("Internet connection OK")
@@ -41,9 +39,8 @@ class CurrencyInfoViewController: UIViewController {
         {
             print("Internet connection FAILED")
             let alert = UIAlertController(title: "Alert", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: {    (action:UIAlertAction!) in
-                print("you have pressed the Cancel button")
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {    (action:UIAlertAction!) in
+                print("you have pressed the Ok button")
             }))
             self.present(alert, animated: true, completion: nil)
         }

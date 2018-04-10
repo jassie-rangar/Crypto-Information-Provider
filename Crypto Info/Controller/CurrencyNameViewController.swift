@@ -57,9 +57,8 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
         {
             print("Internet connection FAILED")
             let alert = UIAlertController(title: "Alert", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action:UIAlertAction!) in
-                print("you have pressed the Cancel button")
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (action:UIAlertAction!) in
+                print("you have pressed the Ok button")
             }))
             self.present(alert, animated: true, completion: nil)
         }
@@ -72,9 +71,12 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
         {
             self.getData()
             { (success, fail, names, price, symb, change24h, ranking, change1h,change7d) in
-                if success == false
+                if !success
                 {
-                    return
+                    DispatchQueue.main.async
+                    {
+                        self.indicator.stopAnimating()
+                    }
                 }
                 else
                 {
@@ -107,9 +109,8 @@ class CurrencyNameViewController: UIViewController, UITableViewDataSource, UITab
         {
             print("Internet connection FAILED")
             let alert = UIAlertController(title: "Alert", message: "No Internet Connection!", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { (action:UIAlertAction!) in
-                print("you have pressed the Cancel button")
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (action:UIAlertAction!) in
+                print("you have pressed the Ok button")
             }))
             self.present(alert, animated: true, completion: nil)
         }
