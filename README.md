@@ -17,7 +17,7 @@
     
 5.) Basics of App:
     When u first launch the app you need to click on reload button in order to fetch new data becoz initially that page shows the saved entities in order to make the app persistent.
-    When you terminate the app and launch it again waiting for few seconds and not hitting the reload button that time you'll see the currencyName and symbol is persistent while other need to be loaded from the internet again by hitting the reload button.(Note: Please try this step in order to see persistence and you should be connected to internet.).
+    When you terminate the app and launch it again waiting for few seconds and not hitting the reload button that time you'll see the currencyName and symbol is persistent while other need to be loaded from the internet again by hitting the reload button.
 
 6.) All the Alerts have benn added to the app.
 
