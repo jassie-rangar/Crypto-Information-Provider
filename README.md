@@ -21,4 +21,4 @@
 
 6.) All the Alerts have benn added to the app.
 
-7.) Enjoy the app and gain some knowledge about Crypto Currency. :) .
+7.) Enjoy the app and gain some knowledge about Crypto Currency. :) 
