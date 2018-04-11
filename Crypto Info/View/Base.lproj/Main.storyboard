@@ -206,25 +206,25 @@
                                     <action selector="Reload:" destination="lHZ-yn-kgF" eventType="touchUpInside" id="qBa-nB-xtl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-GN-FS0">
-                                <rect key="frame" x="0.0" y="126" width="375" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crypto Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-GN-FS0">
+                                <rect key="frame" x="0.0" y="126" width="375" height="105"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rm2-tq-Qtc">
-                                <rect key="frame" x="0.0" y="209" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="239" width="375" height="573"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="329" id="hRP-M0-nao" customClass="TableViewCell" customModule="Crypto_Info" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="329" id="hRP-M0-nao" customClass="TableViewCell" customModule="Crypto_Info" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="329"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hRP-M0-nao" id="T9O-IA-k7n">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="328.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KW-mi-Mb1">
-                                                    <rect key="frame" x="15" y="11" width="160" height="74"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KW-mi-Mb1">
+                                                    <rect key="frame" x="15" y="11" width="202" height="74"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="117" id="vUV-0e-Ct7"/>
                                                     </constraints>
@@ -288,7 +288,7 @@
                                             <constraints>
                                                 <constraint firstItem="HVe-Q0-H3Q" firstAttribute="top" secondItem="5KW-mi-Mb1" secondAttribute="bottom" constant="8" symbolic="YES" id="2wq-RL-bzZ"/>
                                                 <constraint firstItem="HVe-Q0-H3Q" firstAttribute="centerY" secondItem="ar8-A2-fjv" secondAttribute="centerY" id="5gH-rM-uNE"/>
-                                                <constraint firstItem="ar8-A2-fjv" firstAttribute="leading" secondItem="5KW-mi-Mb1" secondAttribute="trailing" constant="66" id="Cgt-ou-JvY"/>
+                                                <constraint firstItem="ar8-A2-fjv" firstAttribute="leading" secondItem="5KW-mi-Mb1" secondAttribute="trailing" constant="-19" id="Cgt-ou-JvY"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="lJu-Cv-AVp" secondAttribute="trailing" constant="64" id="GW5-US-FZx"/>
                                                 <constraint firstItem="lJu-Cv-AVp" firstAttribute="top" secondItem="ar8-A2-fjv" secondAttribute="bottom" constant="35" id="HMw-fv-H4y"/>
                                                 <constraint firstAttribute="trailing" secondItem="HVe-Q0-H3Q" secondAttribute="trailing" constant="292" id="TGa-6E-ys5"/>
@@ -342,14 +342,14 @@
                             <constraint firstItem="0Sq-ef-10F" firstAttribute="trailing" secondItem="uGy-Bj-1C9" secondAttribute="trailing" id="UIR-Kj-zps"/>
                             <constraint firstItem="eHa-GN-FS0" firstAttribute="leading" secondItem="06P-WN-Lej" secondAttribute="leading" id="czG-1W-7VV"/>
                             <constraint firstItem="rm2-tq-Qtc" firstAttribute="trailing" secondItem="eHa-GN-FS0" secondAttribute="trailing" id="dPe-eG-woR"/>
-                            <constraint firstItem="rm2-tq-Qtc" firstAttribute="top" secondItem="0Sq-ef-10F" secondAttribute="bottom" constant="91" id="gUA-Es-brG"/>
+                            <constraint firstItem="rm2-tq-Qtc" firstAttribute="top" secondItem="0Sq-ef-10F" secondAttribute="bottom" constant="121" id="gUA-Es-brG"/>
                             <constraint firstItem="6LR-JE-tXY" firstAttribute="centerX" secondItem="eHa-GN-FS0" secondAttribute="centerX" id="hAA-sX-zid"/>
                             <constraint firstItem="6LR-JE-tXY" firstAttribute="centerY" secondItem="06P-WN-Lej" secondAttribute="centerY" id="hb3-1M-8X3"/>
                             <constraint firstItem="rm2-tq-Qtc" firstAttribute="leading" secondItem="eHa-GN-FS0" secondAttribute="leading" id="pmu-5X-L1N"/>
                             <constraint firstItem="rm2-tq-Qtc" firstAttribute="top" secondItem="eHa-GN-FS0" secondAttribute="bottom" constant="8" symbolic="YES" id="rcd-QX-T0s"/>
                             <constraint firstItem="0Sq-ef-10F" firstAttribute="top" secondItem="uGy-Bj-1C9" secondAttribute="top" id="udF-2Y-ve8"/>
                             <constraint firstItem="0Sq-ef-10F" firstAttribute="trailing" secondItem="uGy-Bj-1C9" secondAttribute="trailing" id="wfx-dP-ifF"/>
-                            <constraint firstItem="uGy-Bj-1C9" firstAttribute="bottom" secondItem="eHa-GN-FS0" secondAttribute="bottom" constant="577" id="y1g-t1-Atz"/>
+                            <constraint firstItem="uGy-Bj-1C9" firstAttribute="bottom" secondItem="eHa-GN-FS0" secondAttribute="bottom" constant="547" id="y1g-t1-Atz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGy-Bj-1C9"/>
                     </view>

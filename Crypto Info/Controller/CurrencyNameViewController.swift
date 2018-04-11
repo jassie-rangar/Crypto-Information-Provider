@@ -252,6 +252,12 @@ extension CurrencyNameViewController
         do
         {
             userArray = try context.fetch(Cell.fetchRequest())
+            DispatchQueue.main.async
+            {
+                self.tableView.reloadData()
+                self.tableView.isHidden = false
+                self.indicator.stopAnimating()
+            }
         }
         catch
         {
